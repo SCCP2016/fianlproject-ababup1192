@@ -1,14 +1,15 @@
 class Directory
-  attr_reader :name
-  def initialize(name)
+  attr_reader :name, :path
+  def initialize(name, path)
     @name = name
+    @path = path
   end
 
   def ==(target)
-    @name == target.name
+    @name == target.name && @path == target.path
   end
 
   def make
-    Dir.mkdir(@name , 0700)
+    Dir.mkdir("#{@path}/#{@name}" , 0700)
   end
 end

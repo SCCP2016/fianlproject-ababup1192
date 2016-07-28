@@ -13,10 +13,10 @@ class CommandParser
     options = @argv.drop(2)
     options_hash = Hash[*options]
 
-    Command.new(@argv[0], @argv[1], 
+    Command.new(@argv[0], @argv[1],
                 options_hash["-h"].nil? ? "ex" : options_hash["-h"] ,
                 options_hash["-f"].nil? ? 1 : options_hash["-f"].to_i ,
                 options_hash["-m"].nil? ? 13 : options_hash["-m"].to_i
-                )
+               )
   end
 end

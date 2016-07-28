@@ -1,0 +1,20 @@
+#!/usr/local/bin/ruby
+# -*- coding: utf-8 -*-
+require_relative 'command-parser'
+require_relative 'dir-repository'
+class Main
+  def initialize
+    # コードを追加
+    parser = CommandParser.new(ARGV)
+    command = parser.parse
+    case command.mode
+    when 'generate'
+      repository = DirRepository.new(command, Dir.pwd)
+      repository.make
+    else
+      STDERR.puts("そのようなコマンドは、ありません。\nexdirmng generate Prog0 -h Ex -f 2 -m 13")
+    end
+  end
+end
+
+Main.new

@@ -1,9 +1,0 @@
-# -*- coding: ascii-8bit -*-
-class Main
-  def initialize
-    # コードを追加
-    # ARGV
-  end
-end
-
-Main.new

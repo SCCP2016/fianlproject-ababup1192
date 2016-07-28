@@ -10,6 +10,6 @@ class Directory
   end
 
   def make
-    Dir.mkdir("#{@path}/#{@name}" , 0700)
+    Dir.mkdir("#{@path}/#{@name}" , 0705)
   end
 end

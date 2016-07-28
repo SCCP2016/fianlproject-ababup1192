@@ -17,7 +17,7 @@ class DirRepository
   end
 
   def make
-    Dir.mkdir(@path, 0700)
+    Dir.mkdir(@path, 0705)
     create_directories.each{|dir| dir.make}
   end
 end

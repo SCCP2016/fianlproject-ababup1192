@@ -1,7 +1,7 @@
 #!/usr/local/bin/ruby
 # -*- coding: utf-8 -*-
-require_relative 'command-parser'
-require_relative 'dir-repository'
+require_relative '../src/command-parser'
+require_relative '../src/dir-repository'
 class Main
   def initialize
     # コードを追加

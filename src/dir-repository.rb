@@ -14,9 +14,14 @@ class DirRepository
   end
 
   def create_directories
-    [1..@max].map{|n| Directory.new()}
+    (1..@max).map{|n| Directory.new(@header + sprintf("%0#{@format}d", n))}
   end
 
   def make
+    create_directories.each{|dir| dir.make}
   end
 end
+
+
+dir_repository = DirRepository.new("Prog0", "Ex", 2, 5)
+dir_repository.make

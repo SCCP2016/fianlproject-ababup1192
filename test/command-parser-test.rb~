@@ -1,0 +1,8 @@
+class CommandParserTest < Test::Unit::TestCase
+  def test_parse
+    parser = CommandParser
+      .new(["generate", "Prog0", "-h", "Ex", "-f", "2", "-m", "13"])
+    expected = Command.new("generate", "Prog0", "Ex", 2, 13)
+    assert_equal expected, parser.parse
+  end
+end

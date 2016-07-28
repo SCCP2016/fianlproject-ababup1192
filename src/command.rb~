@@ -1,0 +1,7 @@
+class Command
+  attr_reader :mode, :dir_name, 
+  def initialize(mode, dir_name, ....)
+   
+  end
+
+end
